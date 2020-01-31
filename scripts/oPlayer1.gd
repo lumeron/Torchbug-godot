@@ -40,7 +40,7 @@ func _physics_process(delta):
 	
 	match state:
 		"FREE":
-			self.KinematicBody2D.PlayerState_Free(velocity)
+			$PhysicalBody.PlayerState_Free(velocity)
 		"INTERACTING":
 			continue
 			#TODO
@@ -58,34 +58,6 @@ func _physics_process(delta):
 			#instance_destroy(self);
 		_:
 			continue
-	
-func PlayerState_Free(velocity):
-	# movement calculations
-#	var hrzSpd = (key_right - key_left)
-#	var vrtSpd = (key_down - key_up)
-	var directionCheck = String(velocity.x)+","+String(velocity.y)
-	
-	match directionCheck:
-		"-1,-1":
-			self.rotation_degrees = -45;
-		"-1,0":
-			self.rotation_degrees = -90;
-		"1,1":
-			self.rotation_degrees = 135;
-		"0,1":
-			self.rotation_degrees = 180;
-		"1,0":
-			self.rotation_degrees = 90;
-		"0,-1":
-			self.rotation_degrees = 0;
-		"1,-1":
-			self.rotation_degrees = 45;
-		"-1,1":
-			self.rotation_degrees = -135;
-		_:
-			continue
-			
-	velocity = move_and_slide(velocity)
 	
 	
 	
