@@ -3,7 +3,7 @@ extends Node2D
 
 var hrzSpd = 0
 var vrtSpd = 0
-var walkSpd = 3
+var walkSpd = 1
 var state = "FREE";
 var velocity = Vector2()
 
@@ -24,8 +24,9 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
+	velocity = Vector2()
 	if Input.is_action_pressed("p1_right"):
-		velocity.x -= 1
+		velocity.x += 1
 	if Input.is_action_pressed("p1_left"):
 		velocity.x -= 1
 	if Input.is_action_pressed("p1_down"):

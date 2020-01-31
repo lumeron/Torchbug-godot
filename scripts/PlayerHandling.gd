@@ -31,7 +31,7 @@ func PlayerState_Free(velocity):
 		_:
 			continue
 			
-	velocity = move_and_slide(velocity)
+	velocity = move_and_collide(velocity)
 	
 	
 	
