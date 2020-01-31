@@ -3,7 +3,7 @@ extends Node2D
 
 var hrzSpd = 0
 var vrtSpd = 0
-var walkSpd = 1
+var walkSpd = 2
 var state = "FREE";
 var velocity = Vector2()
 
