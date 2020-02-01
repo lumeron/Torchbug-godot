@@ -3,12 +3,10 @@
 [ext_resource path="res://assets/sprites/connector_vertical_withFlooring.png" type="Texture" id=1]
 
 [sub_resource type="OccluderPolygon2D" id=1]
-closed = false
-polygon = PoolVector2Array( 40.0023, 747.039, 46.9127, 753.874, 603.358, 179.821, 596.948, 173.512, 39.9412, 746.979 )
+polygon = PoolVector2Array( 39.4715, 747.708, 46.6287, 754.434, 604.527, 180.484, 596.98, 172.992, 38.9968, 747.247 )
 
 [sub_resource type="OccluderPolygon2D" id=2]
-closed = false
-polygon = PoolVector2Array( 733.283, 306.269, 740.238, 313.029, 182.81, 886.552, 175.836, 879.579, 733.355, 306.268 )
+polygon = PoolVector2Array( 733.373, 305.693, 740.664, 313.084, 182.758, 886.811, 175.398, 879.658, 733.373, 305.693 )
 
 [node name="oConnectorVertical" type="Node2D"]
 

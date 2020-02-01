@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/objects/oPlayer1.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scenes/objects/oOpeningBlocker.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/objects/oConnectorHorizontal.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/objects/oConnectorVertical.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/sprites/Cells.png" type="Texture" id=12]
 
 [node name="Main" type="Node2D"]
 position = Vector2( -168.59, 174.611 )
@@ -111,7 +112,7 @@ rotation = 1.5708
 position = Vector2( -916.226, 3299.06 )
 
 [node name="oConnectorHorizontal24" parent="Level1/ConnectorSpace" instance=ExtResource( 9 )]
-position = Vector2( -1501.43, 3298.66 )
+position = Vector2( -1500.29, 3299.23 )
 rotation = 1.5708
 
 [node name="oConnectorHorizontal25" parent="Level1/ConnectorSpace" instance=ExtResource( 10 )]
@@ -130,6 +131,12 @@ position = Vector2( 1572.54, 3792.69 )
 position = Vector2( 2066.54, 3296.89 )
 rotation = 1.5708
 
+[node name="Cells" type="Sprite" parent="Level1/ConnectorSpace"]
+position = Vector2( -1408.38, 3298.45 )
+scale = Vector2( 0.2, 0.2 )
+z_index = -1
+texture = ExtResource( 12 )
+
 [node name="GroundSpace" type="Area2D" parent="Level1"]
 
 [node name="oStartingShip" parent="Level1/GroundSpace" instance=ExtResource( 5 )]
@@ -139,6 +146,27 @@ scale = Vector2( 5, 5 )
 [node name="oTable" parent="Level1/GroundSpace" instance=ExtResource( 3 )]
 position = Vector2( 575.587, -66.6381 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="oRectangleRoom" parent="Level1/GroundSpace" instance=ExtResource( 8 )]
+position = Vector2( -1908.27, 130.765 )
+
+[node name="oSquareRoom" parent="Level1/GroundSpace" instance=ExtResource( 7 )]
+position = Vector2( -1407.76, 1911.86 )
+
+[node name="oSquareRoom2" parent="Level1/GroundSpace" instance=ExtResource( 7 )]
+position = Vector2( -1404.4, -855.228 )
+
+[node name="oRectangleRoom2" parent="Level1/GroundSpace" instance=ExtResource( 8 )]
+position = Vector2( -905.819, 4684.07 )
+
+[node name="oSquareRoom3" parent="Level1/GroundSpace" instance=ExtResource( 7 )]
+position = Vector2( -2399.88, 4684.01 )
+
+[node name="oSquareRoom4" parent="Level1/GroundSpace" instance=ExtResource( 7 )]
+position = Vector2( -2409.33, 1120.74 )
+
+[node name="oSquareRoom5" parent="Level1/GroundSpace" instance=ExtResource( 7 )]
+position = Vector2( 1571.86, 3297.64 )
 
 [node name="PropSpace" type="Area2D" parent="Level1"]
 
@@ -151,7 +179,8 @@ position = Vector2( 561.679, 1213.91 )
 rotation = -0.454454
 
 [node name="oFuseBoxLight3" parent="Level1/PropSpace" instance=ExtResource( 6 )]
-position = Vector2( -1223.17, 4502.3 )
+position = Vector2( -1855.09, -350.317 )
+rotation = 1.5708
 
 [node name="CharacterSpace" type="Area2D" parent="Level1"]
 z_index = 1
@@ -167,23 +196,6 @@ scale = Vector2( 0.1, 0.1 )
 position = Vector2( 977.255, 473.21 )
 scale = Vector2( 0.1, 0.1 )
 
-[node name="oRectangleRoom" parent="." instance=ExtResource( 8 )]
-position = Vector2( -1908.27, 130.765 )
-
-[node name="oSquareRoom" parent="." instance=ExtResource( 7 )]
-position = Vector2( -1407.76, 1911.86 )
-
-[node name="oSquareRoom2" parent="." instance=ExtResource( 7 )]
-position = Vector2( -1404.4, -855.228 )
-
-[node name="oRectangleRoom2" parent="." instance=ExtResource( 8 )]
-position = Vector2( -905.819, 4684.07 )
-
-[node name="oSquareRoom3" parent="." instance=ExtResource( 7 )]
-position = Vector2( -2399.88, 4684.01 )
-
-[node name="oSquareRoom4" parent="." instance=ExtResource( 7 )]
-position = Vector2( -2409.33, 1120.74 )
-
-[node name="oSquareRoom5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1571.86, 3297.64 )
+[node name="oConnectorHorizontal" parent="." instance=ExtResource( 9 )]
+position = Vector2( -2404.95, 4680.52 )
+scale = Vector2( 1.6, 35 )

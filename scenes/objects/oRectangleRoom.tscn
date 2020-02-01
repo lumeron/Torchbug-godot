@@ -3,22 +3,22 @@
 [ext_resource path="res://assets/sprites/rectangle_room_withFloors.png" type="Texture" id=1]
 
 [sub_resource type="OccluderPolygon2D" id=1]
-polygon = PoolVector2Array( 108.061, 116.329, 100.446, 108.928, 379.461, -177.416, 665.903, 100.983, 659.321, 107.756, 380.122, -163.005 )
+polygon = PoolVector2Array( 108.467, 117.453, 100.151, 109.371, 379.461, -177.416, 667.695, 101.701, 659.671, 110.184, 380.143, -162.158 )
 
-[sub_resource type="OccluderPolygon2D" id=6]
-polygon = PoolVector2Array( 810.031, 241.195, 802.994, 248.275, 1082.35, 520.209, 810.628, 799.821, 818.059, 807.2, 1096.99, 519.928 )
+[sub_resource type="OccluderPolygon2D" id=7]
+polygon = PoolVector2Array( 810.596, 238.862, 802.994, 248.275, 1080.76, 519.89, 808.195, 800.328, 818.851, 809.301, 1096.99, 519.928 )
 
-[sub_resource type="OccluderPolygon2D" id=2]
-polygon = PoolVector2Array( 666.953, 101.533, 659.762, 109.061, 85.9117, -448.957, 93.0543, -456.021, 666.828, 101.662 )
+[sub_resource type="OccluderPolygon2D" id=8]
+polygon = PoolVector2Array( 667.955, 102.164, 659.56, 110.802, 85.2046, -448.875, 92.8574, -456.35, 668.61, 102.155 )
 
-[sub_resource type="OccluderPolygon2D" id=3]
-polygon = PoolVector2Array( 671.59, 942.997, 399.799, 1222.58, 120.115, 950.831, 112.95, 958.103, 400.072, 1236.99, 678.944, 950.075 )
+[sub_resource type="OccluderPolygon2D" id=9]
+polygon = PoolVector2Array( 671.59, 942.997, 399.799, 1222.58, 120.115, 950.831, 112.95, 958.103, 400.072, 1236.99, 680.221, 951.429 )
 
 [sub_resource type="OccluderPolygon2D" id=5]
-polygon = PoolVector2Array( -38.4807, 252.893, -31.0807, 259.923, -302.638, 539.942, -22.5938, 811.784, -29.9282, 819.331, -317.938, 539.54 )
+polygon = PoolVector2Array( -38.4807, 252.893, -30.6691, 260.309, -302.638, 539.942, -22.5938, 811.784, -29.9282, 819.331, -317.938, 539.54 )
 
-[sub_resource type="OccluderPolygon2D" id=4]
-polygon = PoolVector2Array( 120.254, 950.97, 693.898, 1508.69, 687.035, 1515.97, 113.065, 958.333 )
+[sub_resource type="OccluderPolygon2D" id=6]
+polygon = PoolVector2Array( 120.184, 950.11, 694.759, 1508.51, 686.76, 1516.74, 111.841, 958.695 )
 
 [node name="oRectangleRoom" type="Node2D"]
 
@@ -64,24 +64,24 @@ build_mode = 1
 polygon = PoolVector2Array( -596.58, 254.983, -23.0689, 811.365, -30.2416, 818.745, -603.768, 261.324 )
 
 [node name="ShadowPolygon2D_top_left" type="LightOccluder2D" parent="KinematicBody2D"]
-position = Vector2( -1149, -108.337 )
+position = Vector2( -1149.16, -108.337 )
 rotation = -0.771159
 occluder = SubResource( 1 )
 
 [node name="ShadowPolygon2D_top_right" type="LightOccluder2D" parent="KinematicBody2D"]
 position = Vector2( -149, -108.337 )
 rotation = -0.771159
-occluder = SubResource( 6 )
+occluder = SubResource( 7 )
 
 [node name="ShadowPolygon2D_top_mid" type="LightOccluder2D" parent="KinematicBody2D"]
 position = Vector2( -149, -108.337 )
 rotation = -0.771159
-occluder = SubResource( 2 )
+occluder = SubResource( 8 )
 
 [node name="ShadowPolygon2D_bottom_right" type="LightOccluder2D" parent="KinematicBody2D"]
 position = Vector2( -149, -108.337 )
 rotation = -0.771159
-occluder = SubResource( 3 )
+occluder = SubResource( 9 )
 
 [node name="ShadowPolygon2D_bottom_left" type="LightOccluder2D" parent="KinematicBody2D"]
 position = Vector2( -1149, -108.337 )
@@ -91,4 +91,4 @@ occluder = SubResource( 5 )
 [node name="ShadowPolygon2D_bottom_mid" type="LightOccluder2D" parent="KinematicBody2D"]
 position = Vector2( -1149, -108.337 )
 rotation = -0.771159
-occluder = SubResource( 4 )
+occluder = SubResource( 6 )

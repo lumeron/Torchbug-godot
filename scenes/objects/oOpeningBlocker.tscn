@@ -3,8 +3,7 @@
 [ext_resource path="res://assets/sprites/baseRoom_opening_blocker.png" type="Texture" id=1]
 
 [sub_resource type="OccluderPolygon2D" id=1]
-closed = false
-polygon = PoolVector2Array( 321.639, 456.683, 465.008, 595.975, 458.512, 602.659, 314.724, 463.846, 321.663, 456.707 )
+polygon = PoolVector2Array( 321.668, 456.474, 465.418, 596.045, 458.054, 603.695, 314.468, 463.85, 321.597, 456.547 )
 
 [node name="oConnectorHorizontal" type="Node2D"]
 
