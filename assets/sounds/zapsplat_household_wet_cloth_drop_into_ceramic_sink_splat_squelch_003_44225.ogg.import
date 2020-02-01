@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zapsplat_household_wet_cloth_drop_into_ceramic_sink_splat_squelch_003_44225.ogg-7bf3f99f8d85fe4d81aff18708029bd1.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/zapsplat_household_wet_cloth_drop_into_ceramic_sink_splat_squelch_003_44225.ogg"
+dest_files=[ "res://.import/zapsplat_household_wet_cloth_drop_into_ceramic_sink_splat_squelch_003_44225.ogg-7bf3f99f8d85fe4d81aff18708029bd1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

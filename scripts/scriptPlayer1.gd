@@ -36,10 +36,10 @@ func _physics_process(_delta):
 		
 	if velocity.x == 0 && velocity.y == 0:
 		$PhysicalBody/animatedGreenWalking.animation = "idle"
-		$PhysicalBody/animatedGreenWalking.playing = false
+		$PhysicalBody/animatedGreenWalking.stop()
 	else:
 		$PhysicalBody/animatedGreenWalking.animation = "moving"
-		$PhysicalBody/animatedGreenWalking.playing = true
+		$PhysicalBody/animatedGreenWalking.play()
 	
 	if Input.is_action_pressed("p1_interact"):
 		state = "INTERACTING"
