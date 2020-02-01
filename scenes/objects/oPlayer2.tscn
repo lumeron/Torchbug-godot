@@ -14,6 +14,10 @@ script = ExtResource( 2 )
 [node name="PhysicalBody" type="KinematicBody2D" parent="."]
 script = ExtResource( 3 )
 
+[node name="Camera2D" type="Camera2D" parent="PhysicalBody"]
+current = true
+process_mode = 0
+
 [node name="Sprite" type="Sprite" parent="PhysicalBody"]
 texture = ExtResource( 1 )
 
