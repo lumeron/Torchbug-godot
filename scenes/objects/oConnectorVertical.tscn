@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/sprites/connector_vertical.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/connector_vertical_withFlooring.png" type="Texture" id=1]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 closed = false
-polygon = PoolVector2Array( 40.2312, 747.126, 47.3237, 754.275, 602.281, 180.277, 595.349, 172.719, 40.5932, 746.375 )
+polygon = PoolVector2Array( 40.0023, 747.039, 46.9127, 753.874, 603.358, 179.821, 596.948, 173.512, 39.9412, 746.979 )
 
 [sub_resource type="OccluderPolygon2D" id=2]
 closed = false
-polygon = PoolVector2Array( 733.31, 306.486, 740.294, 313.425, 185.675, 886.777, 177.09, 878.352, 733.208, 306.538 )
+polygon = PoolVector2Array( 733.283, 306.269, 740.238, 313.029, 182.81, 886.552, 175.836, 879.579, 733.355, 306.268 )
 
 [node name="oConnectorVertical" type="Node2D"]
 
@@ -21,13 +21,13 @@ texture = ExtResource( 1 )
 position = Vector2( -648.951, -108.337 )
 rotation = -0.771159
 build_mode = 1
-polygon = PoolVector2Array( 732.487, 306.59, 738.941, 312.863, 185.095, 885.15, 176.239, 876.542 )
+polygon = PoolVector2Array( 733.313, 305.848, 740.113, 312.797, 182.762, 886.601, 175.686, 879.434 )
 
 [node name="CollisionPolygon2D_left" type="CollisionPolygon2D" parent="KinematicBody2D"]
 position = Vector2( -648.951, -108.337 )
 rotation = -0.771159
 build_mode = 1
-polygon = PoolVector2Array( 594.42, 172.919, 602.918, 180.811, 47.4133, 754.183, 39.2216, 746.938 )
+polygon = PoolVector2Array( 596.908, 173.787, 603.737, 180.424, 46.7379, 754.298, 39.5829, 747.226 )
 
 [node name="ShadowPolygon2D_left" type="LightOccluder2D" parent="KinematicBody2D"]
 position = Vector2( -648.951, -108.337 )

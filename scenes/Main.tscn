@@ -142,19 +142,22 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="PropSpace" type="Area2D" parent="Level1"]
 
+[node name="oFuseBoxLight" parent="Level1/PropSpace" instance=ExtResource( 6 )]
+position = Vector2( 1788.84, -460.949 )
+rotation = -2.99118
+
+[node name="oFuseBoxLight2" parent="Level1/PropSpace" instance=ExtResource( 6 )]
+position = Vector2( 561.679, 1213.91 )
+rotation = -0.454454
+
+[node name="oFuseBoxLight3" parent="Level1/PropSpace" instance=ExtResource( 6 )]
+position = Vector2( -1223.17, 4502.3 )
+
 [node name="CharacterSpace" type="Area2D" parent="Level1"]
 z_index = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Level1/CharacterSpace"]
 color = Color( 0, 0, 0, 1 )
-
-[node name="oFuseBoxLight" parent="Level1/CharacterSpace" instance=ExtResource( 6 )]
-position = Vector2( 1788.84, -460.949 )
-rotation = -2.99118
-
-[node name="oFuseBoxLight2" parent="Level1/CharacterSpace" instance=ExtResource( 6 )]
-position = Vector2( 561.679, 1213.91 )
-rotation = -0.454454
 
 [node name="oPlayer1" parent="Level1/CharacterSpace" instance=ExtResource( 2 )]
 position = Vector2( 1142.2, -68.9357 )

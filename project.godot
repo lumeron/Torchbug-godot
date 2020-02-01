@@ -88,5 +88,5 @@ p2_drop={
 
 [rendering]
 
-environment/default_clear_color=Color( 0.611765, 0.592157, 0.592157, 1 )
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
