@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Blind_Shift.ogg-71641334dfa073a26ffe73d2cfeaee29.oggstr"
+
+[deps]
+
+source_file="res://assets/music/Blind_Shift.ogg"
+dest_files=[ "res://.import/Blind_Shift.ogg-71641334dfa073a26ffe73d2cfeaee29.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
