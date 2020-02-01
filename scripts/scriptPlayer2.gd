@@ -3,7 +3,7 @@ extends Node2D
 
 var hrzSpd = 0
 var vrtSpd = 0
-var walkSpd = 2
+var walkSpd = (1 * GLOBAL.game_movement_speed_factor)
 var state = "FREE";
 var velocity = Vector2()
 
@@ -25,18 +25,18 @@ func _ready():
 
 func _physics_process(delta):
 	velocity = Vector2()
-	if Input.is_action_pressed("p1_right"):
+	if Input.is_action_pressed("p2_right"):
 		velocity.x += 1
-	if Input.is_action_pressed("p1_left"):
+	if Input.is_action_pressed("p2_left"):
 		velocity.x -= 1
-	if Input.is_action_pressed("p1_down"):
+	if Input.is_action_pressed("p2_down"):
 		velocity.y += 1
-	if Input.is_action_pressed("p1_up"):
+	if Input.is_action_pressed("p2_up"):
 		velocity.y -= 1
 	
-	if Input.is_action_pressed("p1_interact"):
+	if Input.is_action_pressed("p2_interact"):
 		state = "INTERACTING"
-	if Input.is_action_pressed("p1_drop"):
+	if Input.is_action_pressed("p2_drop"):
 		state = "DROPPING"
 	
 	match state:

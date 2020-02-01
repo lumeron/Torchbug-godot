@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var game_movement_speed_factor = 5
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

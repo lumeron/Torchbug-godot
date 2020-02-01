@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/sprites/Helmet_Brown.png" type="Texture" id=1]
-[ext_resource path="res://scripts/scriptPlayer1.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/Helmet_Green.png" type="Texture" id=1]
+[ext_resource path="res://scripts/scriptPlayer2.gd" type="Script" id=2]
 [ext_resource path="res://scripts/PlayerHandling.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 490.0
 
-[node name="oPlayer1" type="Node2D"]
+[node name="oPlayer2" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="PhysicalBody" type="KinematicBody2D" parent="."]

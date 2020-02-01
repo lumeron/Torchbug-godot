@@ -30,7 +30,9 @@ func PlayerState_Free(velocity):
 			self.rotation_degrees = -135;
 		_:
 			continue
-			
+	
+	velocity.x *= GLOBAL.game_movement_speed_factor
+	velocity.y *= GLOBAL.game_movement_speed_factor
 	velocity = move_and_collide(velocity)
 	
 	
