@@ -23,6 +23,10 @@ config/icon="res://icon.png"
 
 GLOBAL="*res://scripts/Main.gd"
 
+[display]
+
+window/size/height=800
+
 [input]
 
 p1_left={

@@ -137,15 +137,15 @@ scale = Vector2( 0.2, 0.2 )
 z_index = -1
 texture = ExtResource( 12 )
 
+[node name="oConnectorHorizontal30" parent="Level1/ConnectorSpace" instance=ExtResource( 9 )]
+position = Vector2( -2404.95, 4680.52 )
+scale = Vector2( 1.6, 35 )
+
 [node name="GroundSpace" type="Area2D" parent="Level1"]
 
 [node name="oStartingShip" parent="Level1/GroundSpace" instance=ExtResource( 5 )]
-position = Vector2( 709.489, 287.076 )
-scale = Vector2( 5, 5 )
-
-[node name="oTable" parent="Level1/GroundSpace" instance=ExtResource( 3 )]
-position = Vector2( 575.587, -66.6381 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( -79.9746, 137.386 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="oRectangleRoom" parent="Level1/GroundSpace" instance=ExtResource( 8 )]
 position = Vector2( -1908.27, 130.765 )
@@ -171,31 +171,33 @@ position = Vector2( 1571.86, 3297.64 )
 [node name="PropSpace" type="Area2D" parent="Level1"]
 
 [node name="oFuseBoxLight" parent="Level1/PropSpace" instance=ExtResource( 6 )]
-position = Vector2( 1788.84, -460.949 )
-rotation = -2.99118
+position = Vector2( -171.082, -132.461 )
+rotation = -0.000595093
+scale = Vector2( 0.5, 0.2 )
 
 [node name="oFuseBoxLight2" parent="Level1/PropSpace" instance=ExtResource( 6 )]
-position = Vector2( 561.679, 1213.91 )
+position = Vector2( -427.404, 693.34 )
 rotation = -0.454454
 
 [node name="oFuseBoxLight3" parent="Level1/PropSpace" instance=ExtResource( 6 )]
 position = Vector2( -1855.09, -350.317 )
 rotation = 1.5708
 
+[node name="oTable" parent="Level1/PropSpace" instance=ExtResource( 3 )]
+position = Vector2( 90.2808, -63.2831 )
+scale = Vector2( 0.3, 0.3 )
+
 [node name="CharacterSpace" type="Area2D" parent="Level1"]
 z_index = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Level1/CharacterSpace"]
+visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="oPlayer1" parent="Level1/CharacterSpace" instance=ExtResource( 2 )]
-position = Vector2( 1142.2, -68.9357 )
+position = Vector2( -46.1807, 299.39 )
 scale = Vector2( 0.1, 0.1 )
 
 [node name="oPlayer2" parent="Level1/CharacterSpace" instance=ExtResource( 4 )]
-position = Vector2( 977.255, 473.21 )
+position = Vector2( -91.7535, -98.5651 )
 scale = Vector2( 0.1, 0.1 )
-
-[node name="oConnectorHorizontal" parent="." instance=ExtResource( 9 )]
-position = Vector2( -2404.95, 4680.52 )
-scale = Vector2( 1.6, 35 )
