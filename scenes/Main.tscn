@@ -1,25 +1,37 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/objects/oPlayer1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/objects/oTable.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/objects/oPlayer2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/oStartingShip.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node2D"]
+position = Vector2( -168.59, 174.611 )
 script = ExtResource( 1 )
 
 [node name="Level1" type="Node2D" parent="."]
 
+[node name="BackgroundSpace" type="Area2D" parent="Level1"]
+z_index = -1
+
+[node name="GroundSpace" type="Area2D" parent="Level1"]
+
+[node name="oStartingShip" parent="Level1/GroundSpace" instance=ExtResource( 5 )]
+position = Vector2( 709.489, 287.076 )
+scale = Vector2( 5, 5 )
+
+[node name="oTable" parent="Level1/GroundSpace" instance=ExtResource( 3 )]
+position = Vector2( 575.587, -66.6381 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="CharacterSpace" type="Area2D" parent="Level1"]
+z_index = 1
 
 [node name="oPlayer1" parent="Level1/CharacterSpace" instance=ExtResource( 2 )]
-position = Vector2( 404, 253 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 1142.2, -68.9357 )
+scale = Vector2( 0.1, 0.1 )
 
 [node name="oPlayer2" parent="Level1/CharacterSpace" instance=ExtResource( 4 )]
-position = Vector2( 243.16, 428.098 )
-scale = Vector2( 0.2, 0.2 )
-
-[node name="oTable" parent="Level1/CharacterSpace" instance=ExtResource( 3 )]
-position = Vector2( 734.263, 350.56 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 977.255, 473.21 )
+scale = Vector2( 0.1, 0.1 )

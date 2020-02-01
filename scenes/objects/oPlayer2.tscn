@@ -8,6 +8,7 @@
 radius = 490.0
 
 [node name="oPlayer2" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
 
 [node name="PhysicalBody" type="KinematicBody2D" parent="."]
