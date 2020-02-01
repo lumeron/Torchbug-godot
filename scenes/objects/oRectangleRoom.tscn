@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/sprites/square_room.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/rectangle_room.png" type="Texture" id=1]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 closed = false
@@ -8,7 +8,7 @@ polygon = PoolVector2Array( 108.061, 116.329, 100.446, 108.928, 379.461, -177.41
 
 [sub_resource type="OccluderPolygon2D" id=2]
 closed = false
-polygon = PoolVector2Array( 810.129, 241.458, 1096.56, 519.966, 818.25, 806.519, 811.033, 799.368, 1082.74, 520.239, 803.248, 248.417 )
+polygon = PoolVector2Array( 666.31, 101.877, 660.328, 108.148, 85.9117, -448.957, 93.0543, -456.021, 666.197, 101.993 )
 
 [sub_resource type="OccluderPolygon2D" id=3]
 closed = false
@@ -16,9 +16,9 @@ polygon = PoolVector2Array( 671.601, 943.117, 399.833, 1223.16, 120.151, 951.328
 
 [sub_resource type="OccluderPolygon2D" id=4]
 closed = false
-polygon = PoolVector2Array( -31.7956, 260.079, -303.12, 539.815, -23.3878, 812.086, -29.8594, 818.745, -316.749, 538.832, -37.8993, 254.147 )
+polygon = PoolVector2Array( 693.943, 1507.92, 687.887, 1514.66, 113.863, 958.803, 120.365, 951.495, 693.77, 1507.92 )
 
-[node name="oSquareRoom" type="Node2D"]
+[node name="oRectangleRoom" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
@@ -26,45 +26,67 @@ polygon = PoolVector2Array( -31.7956, 260.079, -303.12, 539.815, -23.3878, 812.0
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D_bottom_left" type="CollisionPolygon2D" parent="KinematicBody2D"]
-position = Vector2( -648.951, -108.337 )
+position = Vector2( -1149, -108.337 )
 rotation = -0.771159
 build_mode = 1
 polygon = PoolVector2Array( -31.7956, 260.079, -303.12, 539.815, -23.3878, 812.086, -29.8594, 818.745, -316.749, 538.832, -37.8993, 254.147 )
 
 [node name="CollisionPolygon2D_top_left" type="CollisionPolygon2D" parent="KinematicBody2D"]
-position = Vector2( -648.951, -108.337 )
+position = Vector2( -1149, -108.337 )
 rotation = -0.771159
 build_mode = 1
 polygon = PoolVector2Array( 108.061, 116.329, 100.446, 108.928, 379.461, -177.416, 665.903, 100.983, 659.321, 107.756, 380.122, -163.005 )
 
 [node name="CollisionPolygon2D_top_right" type="CollisionPolygon2D" parent="KinematicBody2D"]
-position = Vector2( -648.951, -108.337 )
+position = Vector2( -149, -108.337 )
 rotation = -0.771159
 build_mode = 1
 polygon = PoolVector2Array( 810.129, 241.458, 1096.56, 519.966, 818.25, 806.519, 811.033, 799.368, 1082.74, 520.239, 803.248, 248.417 )
 
+[node name="CollisionPolygon2D_top_mid" type="CollisionPolygon2D" parent="KinematicBody2D"]
+position = Vector2( -149, -108.337 )
+rotation = -0.771159
+build_mode = 1
+polygon = PoolVector2Array( 92.8312, -455.986, 666.456, 101.864, 660.102, 108.771, 85.7933, -448.744 )
+
 [node name="CollisionPolygon2D_bottom_right" type="CollisionPolygon2D" parent="KinematicBody2D"]
-position = Vector2( -648.951, -108.337 )
+position = Vector2( -149, -108.337 )
 rotation = -0.771159
 build_mode = 1
 polygon = PoolVector2Array( 671.601, 943.117, 399.833, 1223.16, 120.151, 951.328, 113.216, 958.162, 399.907, 1236.76, 678.745, 950.06 )
 
+[node name="CollisionPolygon2D_bottom_mid" type="CollisionPolygon2D" parent="KinematicBody2D"]
+position = Vector2( -149, -108.337 )
+rotation = -0.771159
+build_mode = 1
+polygon = PoolVector2Array( -596.58, 254.983, -23.0689, 811.365, -30.2416, 818.745, -603.768, 261.324 )
+
 [node name="ShadowPolygon2D_top_left" type="LightOccluder2D" parent="KinematicBody2D"]
-position = Vector2( -648.951, -108.337 )
+position = Vector2( -1149, -108.337 )
 rotation = -0.771159
 occluder = SubResource( 1 )
 
 [node name="ShadowPolygon2D_top_right" type="LightOccluder2D" parent="KinematicBody2D"]
-position = Vector2( -648.951, -108.337 )
+position = Vector2( -149, -108.337 )
+rotation = -0.771159
+occluder = SubResource( 2 )
+
+[node name="ShadowPolygon2D_top_mid" type="LightOccluder2D" parent="KinematicBody2D"]
+position = Vector2( -149, -108.337 )
 rotation = -0.771159
 occluder = SubResource( 2 )
 
 [node name="ShadowPolygon2D_bottom_right" type="LightOccluder2D" parent="KinematicBody2D"]
-position = Vector2( -648.951, -108.337 )
+position = Vector2( -149, -108.337 )
 rotation = -0.771159
 occluder = SubResource( 3 )
 
 [node name="ShadowPolygon2D_bottom_left" type="LightOccluder2D" parent="KinematicBody2D"]
-position = Vector2( -648.951, -108.337 )
+position = Vector2( -1149, -108.337 )
+rotation = -0.771159
+occluder = SubResource( 4 )
+
+[node name="ShadowPolygon2D_bottom_mid" type="LightOccluder2D" parent="KinematicBody2D"]
+position = Vector2( -1149, -108.337 )
 rotation = -0.771159
 occluder = SubResource( 4 )
