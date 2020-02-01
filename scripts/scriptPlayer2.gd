@@ -43,9 +43,7 @@ func _physics_process(_delta):
 		"FREE":
 			$PhysicalBody.PlayerState_Free(velocity)
 		"INTERACTING":
-			continue
-			#TODO
-			#PlayerState_Interacting();
+			$PhysicalBody/InteractRange.PlayerState_Interacting()
 		"DROPPING":
 			continue
 			#TODO
