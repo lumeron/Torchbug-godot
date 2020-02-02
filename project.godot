@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Torchbug-godot"
 run/main_scene="res://scenes/Main.tscn"
+boot_splash/image="res://assets/sprites/Main.png"
 config/icon="res://torchbug.png"
 
 [audio]
@@ -29,7 +30,9 @@ GLOBAL="*res://scripts/Main.gd"
 
 [display]
 
-window/size/height=800
+window/size/width=1920
+window/size/height=1080
+window/size/borderless=true
 
 [input]
 

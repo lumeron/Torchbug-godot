@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/objects/oPlayer1.tscn" type="PackedScene" id=2]
@@ -15,10 +15,35 @@
 [ext_resource path="res://assets/music/Blind_Shift.ogg" type="AudioStream" id=13]
 [ext_resource path="res://scenes/objects/oCreature.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/objects/Level_Complete.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/objects/oProp4.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/objects/oProp5.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/objects/oProp1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/objects/oProp3.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/objects/oProp2.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/animations/intro.tres" type="Texture" id=21]
 
 [node name="Main" type="Node2D"]
 position = Vector2( -168.59, 174.611 )
 script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Intro" type="Node2D" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="Intro"]
+margin_left = 169.456
+margin_top = -173.072
+margin_right = 2089.46
+margin_bottom = 906.928
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="Intro/TextureRect"]
+position = Vector2( 993.779, 556.577 )
+zoom = Vector2( 1.9, 1.9 )
 
 [node name="Level1" type="Node2D" parent="."]
 
@@ -183,8 +208,8 @@ rotation = -0.000595093
 scale = Vector2( 0.5, 0.2 )
 
 [node name="oFuseBoxLight2" parent="Level1/PropSpace" instance=ExtResource( 6 )]
-position = Vector2( -427.404, 693.34 )
-rotation = -0.454454
+position = Vector2( -925.062, -141.223 )
+rotation = -3.15123
 
 [node name="oFuseBoxLight3" parent="Level1/PropSpace" instance=ExtResource( 6 )]
 position = Vector2( -1855.09, -350.317 )
@@ -194,12 +219,73 @@ rotation = 1.5708
 position = Vector2( 1787.12, 2811.71 )
 rotation = 1.56694
 
+[node name="oFuseBoxLight5" parent="Level1/PropSpace" instance=ExtResource( 6 )]
+position = Vector2( -1890.7, 4815.56 )
+
+[node name="oTable" parent="Level1/PropSpace" instance=ExtResource( 3 )]
+position = Vector2( 86.879, -62.2139 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="oProp1" parent="Level1/PropSpace" instance=ExtResource( 18 )]
+position = Vector2( -1076.43, 5068.54 )
+
+[node name="oProp5" parent="Level1/PropSpace" instance=ExtResource( 17 )]
+position = Vector2( -966.225, 4915.8 )
+rotation = 0.194848
+
+[node name="oProp3" parent="Level1/PropSpace" instance=ExtResource( 19 )]
+position = Vector2( 1392.9, 2917.47 )
+
+[node name="oProp6" parent="Level1/PropSpace" instance=ExtResource( 17 )]
+position = Vector2( 1523.82, 3073.55 )
+rotation = 2.53679
+
+[node name="oProp4" parent="Level1/PropSpace" instance=ExtResource( 16 )]
+position = Vector2( -2761.68, 4254.81 )
+
+[node name="oProp7" parent="Level1/PropSpace" instance=ExtResource( 16 )]
+position = Vector2( -2767.26, 5113.98 )
+
+[node name="oProp8" parent="Level1/PropSpace" instance=ExtResource( 16 )]
+position = Vector2( -21.0806, -231.487 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="oProp9" parent="Level1/PropSpace" instance=ExtResource( 17 )]
+position = Vector2( 68.6458, -134.243 )
+rotation = -0.46365
+scale = Vector2( 0.2, 0.2 )
+
+[node name="oTable2" parent="Level1/PropSpace" instance=ExtResource( 3 )]
+position = Vector2( -1441.93, 156.2 )
+
+[node name="oTable3" parent="Level1/PropSpace" instance=ExtResource( 3 )]
+position = Vector2( -2281.63, 156.135 )
+
+[node name="oProp10" parent="Level1/PropSpace" instance=ExtResource( 17 )]
+position = Vector2( -1210.85, -942.466 )
+rotation = -1.04365
+
+[node name="oProp11" parent="Level1/PropSpace" instance=ExtResource( 16 )]
+position = Vector2( -2733.72, 683.656 )
+
+[node name="oProp12" parent="Level1/PropSpace" instance=ExtResource( 16 )]
+position = Vector2( -2069.39, 690.205 )
+
+[node name="oProp2" parent="Level1/PropSpace" instance=ExtResource( 20 )]
+position = Vector2( -2662.66, -261.222 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="oProp13" parent="Level1/PropSpace" instance=ExtResource( 20 )]
+position = Vector2( -1031.15, -868.523 )
+rotation = 1.5708
+
+[node name="oProp14" parent="Level1/PropSpace" instance=ExtResource( 17 )]
+position = Vector2( -2716.61, -136.16 )
+rotation = -2.72623
+scale = Vector2( 0.4, 0.4 )
+
 [node name="CharacterSpace" type="Area2D" parent="Level1"]
 z_index = 1
-
-[node name="oTable" parent="Level1/CharacterSpace" instance=ExtResource( 3 )]
-position = Vector2( 90.2808, -63.2831 )
-scale = Vector2( 0.3, 0.3 )
 
 [node name="LevelCompleteNode" parent="Level1/CharacterSpace" instance=ExtResource( 15 )]
 position = Vector2( -4946.21, 1911.08 )
@@ -220,6 +306,3 @@ scale = Vector2( 0.1, 0.1 )
 [node name="oCreature" parent="Level1/CharacterSpace" instance=ExtResource( 14 )]
 position = Vector2( -1085.13, 2306.21 )
 scale = Vector2( 0.1, 0.1 )
-
-[node name="oFuseBoxLight" parent="." instance=ExtResource( 6 )]
-position = Vector2( -1890.7, 4815.56 )
