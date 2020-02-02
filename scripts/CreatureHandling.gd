@@ -26,9 +26,9 @@ func CreatureState_roaming(velocity):
 			self.rotation_degrees = -135;
 		_:
 			continue
-#
-#	velocity.x *= GLOBAL.game_movement_speed_factor
-#	velocity.y *= GLOBAL.game_movement_speed_factor
+
+	velocity.x *= GLOBAL.ai_movement_speed_factor
+	velocity.y *= GLOBAL.ai_movement_speed_factor
 	var collision = move_and_collide(velocity)
 	if collision:
 		get_parent()._change_direction()

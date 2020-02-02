@@ -43,7 +43,9 @@ func _physics_process(_delta):
 	
 	if Input.is_action_pressed("p2_interact"):
 		state = "INTERACTING"
-	if Input.is_action_pressed("p2_drop"):
+		
+#	if Input.is_action_pressed("p2_drop"):
+	if Input.is_action_just_released("p2_drop"):
 		state = "DROPPING"
 	
 	match state:
@@ -53,9 +55,14 @@ func _physics_process(_delta):
 			#$PhysicalBody/InteractRange.PlayerState_Interacting()
 			continue
 		"DROPPING":
-			continue
-			#TODO
-			#PlayerState_Interacting();
+#			var temp = Vector2($PhysicalBody.position.x,$PhysicalBody.position.y)
+#			GLOBAL.create_item(temp)
+			#if Input.is_action_just_pressed("p2_drop"):
+			var droppedLight = GLOBAL.LIGHT_STICK.instance()
+			add_child(droppedLight)
+			droppedLight.position = Vector2($PhysicalBody.position.x,$PhysicalBody.position.y)
+			droppedLight.scale = Vector2(1.5,1.5)
+			state = "FREE"
 		"DYING":
 			continue
 			#TODO

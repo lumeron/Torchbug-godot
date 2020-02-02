@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/objects/oPlayer1.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets/sprites/Cells.png" type="Texture" id=12]
 [ext_resource path="res://assets/music/Blind_Shift.ogg" type="AudioStream" id=13]
 [ext_resource path="res://scenes/objects/oCreature.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/objects/Level_Complete.tscn" type="PackedScene" id=15]
 
 [node name="Main" type="Node2D"]
 position = Vector2( -168.59, 174.611 )
@@ -189,12 +190,21 @@ rotation = -0.454454
 position = Vector2( -1855.09, -350.317 )
 rotation = 1.5708
 
-[node name="oTable" parent="Level1/PropSpace" instance=ExtResource( 3 )]
-position = Vector2( 90.2808, -63.2831 )
-scale = Vector2( 0.3, 0.3 )
+[node name="oFuseBoxLight4" parent="Level1/PropSpace" instance=ExtResource( 6 )]
+position = Vector2( 1787.12, 2811.71 )
+rotation = 1.56694
 
 [node name="CharacterSpace" type="Area2D" parent="Level1"]
 z_index = 1
+
+[node name="oTable" parent="Level1/CharacterSpace" instance=ExtResource( 3 )]
+position = Vector2( 90.2808, -63.2831 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="LevelCompleteNode" parent="Level1/CharacterSpace" instance=ExtResource( 15 )]
+position = Vector2( -4946.21, 1911.08 )
+rotation = 1.56694
+scale = Vector2( 0.5, 0.5 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Level1/CharacterSpace"]
 color = Color( 0, 0, 0, 1 )
@@ -208,5 +218,8 @@ position = Vector2( -91.7535, -98.5651 )
 scale = Vector2( 0.1, 0.1 )
 
 [node name="oCreature" parent="Level1/CharacterSpace" instance=ExtResource( 14 )]
-position = Vector2( -1557.39, 247.732 )
+position = Vector2( -1085.13, 2306.21 )
 scale = Vector2( 0.1, 0.1 )
+
+[node name="oFuseBoxLight" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1890.7, 4815.56 )

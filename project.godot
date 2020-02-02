@@ -19,6 +19,10 @@ config/name="Torchbug-godot"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://torchbug.png"
 
+[audio]
+
+default_bus_layout=""
+
 [autoload]
 
 GLOBAL="*res://scripts/Main.gd"

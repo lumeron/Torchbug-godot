@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/helmet_breathe.ogg-1dccbfde261ac090e8b62d733084eb37.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/helmet_breathe.ogg"
+dest_files=[ "res://.import/helmet_breathe.ogg-1dccbfde261ac090e8b62d733084eb37.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
