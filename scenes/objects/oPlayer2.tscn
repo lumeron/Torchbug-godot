@@ -52,6 +52,6 @@ stream_paused = true
 
 [node name="AudioStreamPlayer2Breath" type="AudioStreamPlayer2D" parent="PhysicalBody"]
 stream = ExtResource( 6 )
-volume_db = -20.0
+volume_db = -30.0
 pitch_scale = 0.9
 autoplay = true

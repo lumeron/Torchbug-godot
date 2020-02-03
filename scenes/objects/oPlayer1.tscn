@@ -23,7 +23,6 @@ script = ExtResource( 3 )
 
 [node name="animatedGreenWalking" parent="PhysicalBody" instance=ExtResource( 6 )]
 scale = Vector2( 0.5, 0.5 )
-animation = "moving"
 
 [node name="Light2D" type="Light2D" parent="PhysicalBody"]
 scale = Vector2( 7, 7 )
@@ -54,6 +53,6 @@ stream_paused = true
 
 [node name="AudioStreamPlayer2DBreath" type="AudioStreamPlayer2D" parent="PhysicalBody"]
 stream = ExtResource( 7 )
-volume_db = -20.0
+volume_db = -30.0
 pitch_scale = 0.9
 autoplay = true

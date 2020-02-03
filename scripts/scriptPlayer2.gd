@@ -37,11 +37,13 @@ func _physics_process(_delta):
 	if velocity.x == 0 && velocity.y == 0:
 		$PhysicalBody/animatedBrownWalking.animation = "idle"
 		$PhysicalBody/animatedBrownWalking.playing = false
+		$PhysicalBody/AudioStreamPlayer2D.set_stream_paused(true)
 	else:
 		$PhysicalBody/animatedBrownWalking.animation = "moving"
 		$PhysicalBody/animatedBrownWalking.playing = true
+		$PhysicalBody/AudioStreamPlayer2D.set_stream_paused(false)
 	
-	if Input.is_action_pressed("p2_interact"):
+	if Input.is_action_just_released("p2_interact"):
 		state = "INTERACTING"
 		
 #	if Input.is_action_pressed("p2_drop"):
@@ -52,8 +54,8 @@ func _physics_process(_delta):
 		"FREE":
 			$PhysicalBody.PlayerState_Free(velocity)
 		"INTERACTING":
+			state = "FREE"
 			#$PhysicalBody/InteractRange.PlayerState_Interacting()
-			continue
 		"DROPPING":
 #			var temp = Vector2($PhysicalBody.position.x,$PhysicalBody.position.y)
 #			GLOBAL.create_item(temp)
@@ -71,6 +73,7 @@ func _physics_process(_delta):
 			#TODO
 			#instance_destroy(self);
 		_:
+			state = "FREE"
 			continue
 	
 	

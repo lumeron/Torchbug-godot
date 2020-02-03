@@ -43,20 +43,20 @@ func _physics_process(_delta):
 		$PhysicalBody/animatedGreenWalking.play()
 		$PhysicalBody/AudioStreamPlayer2D.set_stream_paused(false)
 	
-	if Input.is_action_pressed("p1_interact"):
+	if Input.is_action_just_released("p1_interact"):
 		state = "INTERACTING"
-	if Input.is_action_pressed("p1_drop"):
+	if Input.is_action_just_released("p1_drop"):
 		state = "DROPPING"
 	
 	match state:
 		"FREE":
 			$PhysicalBody.PlayerState_Free(velocity)
 		"INTERACTING":
-			continue
+			state = "FREE"
 			#TODO
 			#PlayerState_Interacting();
 		"DROPPING":
-			continue
+			state = "FREE"
 			#TODO
 			#PlayerState_Interacting();
 		"DYING":
@@ -67,6 +67,7 @@ func _physics_process(_delta):
 			#TODO
 			#instance_destroy(self);
 		_:
+			state = "FREE"
 			continue
 	
 	

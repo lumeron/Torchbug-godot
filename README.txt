@@ -13,10 +13,10 @@ About:
 
 Run Steps (if not using executable file):
 
- 1) Extract source zip 
+ 1) Extract source zip or download code from jam-cutoff branch of git repository
  2) Install or download Godot (standalone launcher available on Godot website)
  3) Open Godot
- 4) Import Project (point to project.godot file in extracted folder in step 1)
+ 4) Import Project (point to project.godot file in extracted folder in step 1) 
  5) Run project
 
 
@@ -24,6 +24,9 @@ Run Steps (if not using executable file):
 
 Note:
     This game was not completely finished during the jam, but a branch will continue to be updated in Git; being built in Godot, everything was from the ground up (no prefabs or similar) - this allowed us to have a very, very light credits section but also cost us a fully-playable game. Collision and layering took precedent, and construction objects were built in a pseudo-modular fashion (modular but not quite ready for grid snap) so that more levels can be built in a matter of minutes. Light sources refer to the same script (except the permanent light affixed to one player), but the script provides randomness that allows for an interesting light show if playing with glowsticks.
+    
+Second note:
+    This game was not completely finished during the jam, but the Git source will continue to be updated; being built in Godot, everything was from the ground up (no prefabs or similar) - this allowed us to have a very, very light credits section but also cost us a fully-playable game. Collision and layering took precedent, and construction objects were built in a pseudo-modular fashion (modular but not quite ready for grid snap) so that more levels can be built in a matter of minutes. Light sources refer to the same script (except the permanent light affixed to one player), but the script provides randomness that allows for an interesting light show if playing with glowsticks. In release state, the game has a slight issue where the camera player will freeze if they press "E" - this is because the control scheme allows the player to go into a state of dropping a glowstick, but that character was not intended to do so... the code requires only a tiny tweak to fix this, but the issue was not identified until after 3PM Sunday.
 
 
 Known bugs: 
