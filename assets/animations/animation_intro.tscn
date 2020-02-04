@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Animation" id=1]
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+anims/intro_animation = SubResource( 1 )

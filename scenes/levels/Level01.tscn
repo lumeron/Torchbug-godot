@@ -1,0 +1,302 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://assets/sprites/Cells.png" type="Texture" id=5]
+[ext_resource path="res://assets/music/Blind_Shift.ogg" type="AudioStream" id=7]
+[ext_resource path="res://scenes/objects/oConnectorVertical.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/objects/oConnectorHorizontal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/objects/oOpeningBlocker.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/objects/oRectangleRoom.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/objects/oSquareRoom.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/objects/oStartingShip.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/objects/oPlayer1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/objects/oCreature.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/objects/oFuseBoxLight.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/objects/oTable.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/objects/oProp5.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/objects/oProp4.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/objects/oProp1.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/objects/oProp3.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/objects/oEmergencyLight.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/objects/oProp2.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/objects/oPlayer2.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/objects/Level_Complete.tscn" type="PackedScene" id=25]
+
+[node name="Level1" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="BackgroundSpace" type="Area2D" parent="."]
+z_index = -1
+
+[node name="ConnectorSpace" type="Area2D" parent="."]
+
+[node name="oConnectorHorizontal" parent="ConnectorSpace" instance=ExtResource( 9 )]
+position = Vector2( -519.376, 132.523 )
+
+[node name="oConnectorVertical" parent="ConnectorSpace" instance=ExtResource( 8 )]
+position = Vector2( -1406.24, 1021.01 )
+
+[node name="oConnectorHorizontal2" parent="ConnectorSpace" instance=ExtResource( 9 )]
+position = Vector2( -2296.42, 1913.86 )
+
+[node name="oConnectorHorizontal3" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -909.884, -855.68 )
+rotation = 1.5708
+
+[node name="oConnectorHorizontal4" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -1404.62, -1349.84 )
+
+[node name="oConnectorHorizontal5" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -1900.25, -854.811 )
+rotation = 1.5708
+
+[node name="oConnectorHorizontal6" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -2408.92, -364.106 )
+
+[node name="oConnectorHorizontal7" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -912.368, 1914.88 )
+rotation = 1.5708
+
+[node name="oConnectorVertical2" parent="ConnectorSpace" instance=ExtResource( 8 )]
+position = Vector2( -1405.63, 2801.39 )
+
+[node name="oConnectorVertical3" parent="ConnectorSpace" instance=ExtResource( 8 )]
+position = Vector2( -1405.32, 3794.89 )
+
+[node name="oConnectorHorizontal8" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -408.203, 4189.92 )
+
+[node name="oConnectorHorizontal9" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -407.493, 5178.13 )
+
+[node name="oConnectorHorizontal10" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( 89.0781, 4685.36 )
+rotation = 1.5708
+
+[node name="oConnectorHorizontal11" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -1408.56, 5178.87 )
+
+[node name="oConnectorHorizontal12" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -2399.88, 4188.77 )
+
+[node name="oConnectorHorizontal13" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -2399.88, 5179.32 )
+
+[node name="oConnectorHorizontal14" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -2895.43, 4684.21 )
+rotation = 1.5708
+
+[node name="oConnectorHorizontal15" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -1914.79, 1121.1 )
+rotation = 1.5708
+
+[node name="oConnectorHorizontal16" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -2408.32, 1615.14 )
+
+[node name="oConnectorHorizontal17" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -2905.76, 1120.69 )
+rotation = 1.5708
+
+[node name="oConnectorHorizontal18" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -2903.87, 130.24 )
+rotation = 1.5708
+
+[node name="oConnectorHorizontal19" parent="ConnectorSpace" instance=ExtResource( 9 )]
+position = Vector2( -3096.89, 1914.25 )
+
+[node name="oConnectorHorizontal20" parent="ConnectorSpace" instance=ExtResource( 9 )]
+position = Vector2( -3897.09, 1914.29 )
+
+[node name="oConnectorHorizontal21" parent="ConnectorSpace" instance=ExtResource( 9 )]
+position = Vector2( -4696.35, 1914.29 )
+
+[node name="oConnectorHorizontal22" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -5100.28, 1914.29 )
+rotation = 1.5708
+
+[node name="oConnectorHorizontal23" parent="ConnectorSpace" instance=ExtResource( 9 )]
+position = Vector2( -916.226, 3299.06 )
+
+[node name="oConnectorHorizontal24" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -1500.29, 3299.23 )
+rotation = 1.5708
+
+[node name="oConnectorHorizontal25" parent="ConnectorSpace" instance=ExtResource( 9 )]
+position = Vector2( -117.288, 3299.19 )
+
+[node name="oConnectorHorizontal26" parent="ConnectorSpace" instance=ExtResource( 9 )]
+position = Vector2( 680.221, 3298.71 )
+
+[node name="oConnectorHorizontal27" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( 1571.86, 2803.19 )
+
+[node name="oConnectorHorizontal28" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( 1572.54, 3792.69 )
+
+[node name="oConnectorHorizontal29" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( 2066.54, 3296.89 )
+rotation = 1.5708
+
+[node name="Cells" type="Sprite" parent="ConnectorSpace"]
+position = Vector2( -1408.38, 3298.45 )
+scale = Vector2( 0.2, 0.2 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="oConnectorHorizontal30" parent="ConnectorSpace" instance=ExtResource( 10 )]
+position = Vector2( -2404.95, 4680.52 )
+scale = Vector2( 1.6, 35 )
+
+[node name="GroundSpace" type="Area2D" parent="."]
+
+[node name="oStartingShip" parent="GroundSpace" instance=ExtResource( 13 )]
+position = Vector2( -79.9746, 137.386 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="oRectangleRoom" parent="GroundSpace" instance=ExtResource( 11 )]
+position = Vector2( -1908.27, 130.765 )
+
+[node name="oSquareRoom" parent="GroundSpace" instance=ExtResource( 12 )]
+position = Vector2( -1407.76, 1911.86 )
+
+[node name="oSquareRoom2" parent="GroundSpace" instance=ExtResource( 12 )]
+position = Vector2( -1404.4, -855.228 )
+
+[node name="oRectangleRoom2" parent="GroundSpace" instance=ExtResource( 11 )]
+position = Vector2( -905.819, 4684.07 )
+
+[node name="oSquareRoom3" parent="GroundSpace" instance=ExtResource( 12 )]
+position = Vector2( -2399.88, 4684.01 )
+
+[node name="oSquareRoom4" parent="GroundSpace" instance=ExtResource( 12 )]
+position = Vector2( -2409.33, 1120.74 )
+
+[node name="oSquareRoom5" parent="GroundSpace" instance=ExtResource( 12 )]
+position = Vector2( 1571.86, 3297.64 )
+
+[node name="PropSpace" type="Area2D" parent="."]
+
+[node name="oFuseBoxLight" parent="PropSpace" instance=ExtResource( 16 )]
+position = Vector2( -4997.17, 1829.57 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.2 )
+
+[node name="oFuseBoxLight2" parent="PropSpace" instance=ExtResource( 16 )]
+position = Vector2( -925.062, -141.223 )
+rotation = -3.15123
+
+[node name="oFuseBoxLight3" parent="PropSpace" instance=ExtResource( 16 )]
+position = Vector2( -1855.09, -350.317 )
+rotation = 1.5708
+
+[node name="oFuseBoxLight4" parent="PropSpace" instance=ExtResource( 16 )]
+position = Vector2( 1787.12, 2811.71 )
+rotation = 1.56694
+
+[node name="oFuseBoxLight5" parent="PropSpace" instance=ExtResource( 16 )]
+position = Vector2( -1890.7, 4815.56 )
+
+[node name="oTable" parent="PropSpace" instance=ExtResource( 17 )]
+position = Vector2( 86.879, -62.2139 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="oProp1" parent="PropSpace" instance=ExtResource( 20 )]
+position = Vector2( -1076.43, 5068.54 )
+z_index = 1
+
+[node name="oProp5" parent="PropSpace" instance=ExtResource( 18 )]
+position = Vector2( -971.008, 4939.72 )
+rotation = 0.194848
+scale = Vector2( 0.3, 0.3 )
+
+[node name="oProp3" parent="PropSpace" instance=ExtResource( 21 )]
+position = Vector2( 1273.32, 2860.07 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="oProp6" parent="PropSpace" instance=ExtResource( 18 )]
+position = Vector2( 1306.18, 2944.4 )
+rotation = 2.53679
+scale = Vector2( 0.3, 0.3 )
+
+[node name="oProp4" parent="PropSpace" instance=ExtResource( 19 )]
+position = Vector2( -2761.68, 4254.81 )
+
+[node name="oProp7" parent="PropSpace" instance=ExtResource( 19 )]
+position = Vector2( -2767.26, 5113.98 )
+
+[node name="oProp8" parent="PropSpace" instance=ExtResource( 19 )]
+position = Vector2( -21.0806, -231.487 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="oProp9" parent="PropSpace" instance=ExtResource( 18 )]
+position = Vector2( 68.6458, -134.243 )
+rotation = -0.46365
+scale = Vector2( 0.2, 0.2 )
+
+[node name="oTable2" parent="PropSpace" instance=ExtResource( 17 )]
+position = Vector2( -1441.93, 156.2 )
+
+[node name="oTable3" parent="PropSpace" instance=ExtResource( 17 )]
+position = Vector2( -2281.63, 156.135 )
+
+[node name="oProp10" parent="PropSpace" instance=ExtResource( 18 )]
+position = Vector2( -1070.4, -900.065 )
+rotation = -1.04365
+scale = Vector2( 0.3, 0.3 )
+
+[node name="oProp11" parent="PropSpace" instance=ExtResource( 19 )]
+position = Vector2( -2733.72, 683.656 )
+
+[node name="oProp12" parent="PropSpace" instance=ExtResource( 19 )]
+position = Vector2( -2069.39, 690.205 )
+
+[node name="oProp2" parent="PropSpace" instance=ExtResource( 23 )]
+position = Vector2( -2784.63, -299.488 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="oProp13" parent="PropSpace" instance=ExtResource( 23 )]
+position = Vector2( -978.149, -865.873 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+
+[node name="oProp14" parent="PropSpace" instance=ExtResource( 18 )]
+position = Vector2( -2838.58, -207.91 )
+rotation = -2.72623
+scale = Vector2( 0.3, 0.3 )
+
+[node name="oProp15" parent="PropSpace" instance=ExtResource( 18 )]
+position = Vector2( -1169.13, 4983.32 )
+rotation = -0.668288
+scale = Vector2( 0.3, 0.3 )
+
+[node name="oEmergencyLight" parent="PropSpace" instance=ExtResource( 22 )]
+position = Vector2( -173.077, -128.483 )
+
+[node name="oEmergencyLight2" parent="PropSpace" instance=ExtResource( 22 )]
+position = Vector2( 53.1393, 266.915 )
+rotation = 3.14159
+
+[node name="CharacterSpace" type="Area2D" parent="."]
+z_index = 1
+
+[node name="LevelCompleteNode" parent="CharacterSpace" instance=ExtResource( 25 )]
+position = Vector2( -4946.21, 1911.08 )
+rotation = 1.56694
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CharacterSpace"]
+color = Color( 0, 0, 0, 1 )
+
+[node name="oPlayer1" parent="CharacterSpace" instance=ExtResource( 14 )]
+position = Vector2( -31.365, -38.5822 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="oPlayer2" parent="CharacterSpace" instance=ExtResource( 24 )]
+position = Vector2( -91.7535, -98.5651 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="oCreature" parent="CharacterSpace" instance=ExtResource( 15 )]
+position = Vector2( -1085.13, 2306.21 )
+scale = Vector2( 0.1, 0.1 )

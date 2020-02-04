@@ -1,13 +1,13 @@
 extends Node2D
 
+var game_movement_speed_factor = 5
+var ai_movement_speed_factor = 4
+const LIGHT_STICK = preload("res://scenes/objects/oLightStick.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#get_tree().change_scene("res://scenes/levels/Intro.tscn")
-	get_tree().change_scene("res://scenes/levels/Intro.tscn")
 	pass # Replace with function body.
-
 
 
 func _unhandled_input(event):

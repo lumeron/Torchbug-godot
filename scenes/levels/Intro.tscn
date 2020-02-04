@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/sprites/Main2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/animation_with_scripted_ending.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/Main.png" type="Texture" id=3]
+
+[sub_resource type="AnimatedTexture" id=1]
+flags = 4
+frames = 6
+fps = 30.0
+frame_0/texture = ExtResource( 3 )
+frame_0/delay_sec = 3.0
+frame_1/texture = ExtResource( 1 )
+frame_1/delay_sec = 0.05
+frame_2/texture = ExtResource( 3 )
+frame_2/delay_sec = 0.05
+frame_3/texture = ExtResource( 1 )
+frame_3/delay_sec = 0.05
+frame_4/texture = ExtResource( 3 )
+frame_4/delay_sec = 0.5
+frame_5/texture = ExtResource( 1 )
+frame_5/delay_sec = 4.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "timer"
+length = 6.0
+
+[node name="Intro" type="Node2D"]
+position = Vector2( -164.302, 177.552 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 169.456
+margin_top = -173.072
+margin_right = 2089.46
+margin_bottom = 906.928
+texture = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="TextureRect"]
+position = Vector2( 958.6, 538.027 )
+current = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+playback_process_mode = 0
+anims/timer = SubResource( 2 )
+[connection signal="animation_finished" from="TextureRect/AnimationPlayer" to="TextureRect" method="_on_AnimationPlayer_animation_finished"]

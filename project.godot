@@ -26,13 +26,12 @@ default_bus_layout=""
 
 [autoload]
 
-GLOBAL="*res://scripts/Main.gd"
+GLOBAL="*res://scripts/global.gd"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
-window/size/fullscreen=true
 
 [input]
 
