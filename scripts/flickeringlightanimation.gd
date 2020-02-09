@@ -1,8 +1,8 @@
 extends AnimationPlayer
 
-export var fuseBox_state = "ON"
+var fuseBox_state = $".".fuseBox_state
 
-var counter = 3.000
+var counter = 0.000
 var timemax = 5.000
 
 # Called when the node enters the scene tree for the first time.
@@ -11,8 +11,18 @@ func _ready():
 	timemax = randi()%15 + 5
 
 func _physics_process(delta):
-	counter += delta
-	if (counter > timemax):
+	if (fuseBox_state):
+		counter += delta
+		if (counter > timemax):
+			randomFlicker(counter)
+			timemax = randi()%18 + 2
+			counter = 0.000
+
+
+func randomFlicker(passedCounter):
+	if (passedCounter > 16):
+		play("flickering_lights3")
+	elif (counter > 8):
+		play("flickering_lights2")
+	else:
 		play("flickering_lights")
-		counter = randi()%20
-		counter = 0.000

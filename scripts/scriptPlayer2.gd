@@ -1,6 +1,8 @@
 extends Node2D
 
 
+export var lightStickReady = true
+
 var hrzSpd = 0
 var vrtSpd = 0
 var walkSpd = (1 * GLOBAL.game_movement_speed_factor)
@@ -47,7 +49,8 @@ func _physics_process(_delta):
 		state = "INTERACTING"
 		
 #	if Input.is_action_pressed("p2_drop"):
-	if Input.is_action_just_released("p2_drop"):
+	if Input.is_action_just_released("p2_drop") && lightStickReady:
+		lightStickReady = false
 		state = "DROPPING"
 	
 	match state:
@@ -64,6 +67,7 @@ func _physics_process(_delta):
 			add_child(droppedLight)
 			droppedLight.position = Vector2($PhysicalBody.position.x,$PhysicalBody.position.y)
 			droppedLight.scale = Vector2(1.5,1.5)
+			$Cooldowns.play("lightstick_cooldown")
 			state = "FREE"
 		"DYING":
 			continue
