@@ -36,6 +36,8 @@ texture = ExtResource( 1 )
 [node name="Light2D" type="Light2D" parent="PhysicalBody"]
 scale = Vector2( 5, 5 )
 texture = ExtResource( 3 )
+energy = 0.0
+mode = 2
 range_z_min = -1
 range_z_max = 3
 range_layer_min = -1

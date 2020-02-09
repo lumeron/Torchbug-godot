@@ -145,10 +145,6 @@ scale = Vector2( 0.2, 0.2 )
 z_index = -1
 texture = ExtResource( 5 )
 
-[node name="oConnectorHorizontal30" parent="ConnectorSpace" instance=ExtResource( 10 )]
-position = Vector2( -2404.95, 4680.52 )
-scale = Vector2( 1.6, 35 )
-
 [node name="GroundSpace" type="Area2D" parent="."]
 
 [node name="oStartingShip" parent="GroundSpace" instance=ExtResource( 13 )]
@@ -277,6 +273,9 @@ position = Vector2( -173.077, -128.483 )
 [node name="oEmergencyLight2" parent="PropSpace" instance=ExtResource( 22 )]
 position = Vector2( 53.1393, 266.915 )
 rotation = 3.14159
+
+[node name="oTable4" parent="PropSpace" instance=ExtResource( 17 )]
+position = Vector2( -2400.67, 4681.19 )
 
 [node name="CharacterSpace" type="Area2D" parent="."]
 z_index = 1
