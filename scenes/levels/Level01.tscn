@@ -269,10 +269,12 @@ scale = Vector2( 0.3, 0.3 )
 
 [node name="oEmergencyLight" parent="PropSpace" instance=ExtResource( 22 )]
 position = Vector2( -173.077, -128.483 )
+pulsingLight = true
 
 [node name="oEmergencyLight2" parent="PropSpace" instance=ExtResource( 22 )]
 position = Vector2( 53.1393, 266.915 )
 rotation = 3.14159
+pulsingLight = true
 
 [node name="oTable4" parent="PropSpace" instance=ExtResource( 17 )]
 position = Vector2( -2400.67, 4681.19 )
@@ -291,6 +293,7 @@ color = Color( 0, 0, 0, 1 )
 [node name="oPlayer1" parent="CharacterSpace" instance=ExtResource( 14 )]
 position = Vector2( -31.365, -38.5822 )
 scale = Vector2( 0.1, 0.1 )
+state = "FREE"
 
 [node name="oPlayer2" parent="CharacterSpace" instance=ExtResource( 24 )]
 position = Vector2( -91.7535, -98.5651 )

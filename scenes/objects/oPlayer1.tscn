@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/sounds/stomp.ogg" type="AudioStream" id=1]
 [ext_resource path="res://scripts/scriptPlayer1.gd" type="Script" id=2]
@@ -8,12 +8,35 @@
 [ext_resource path="res://assets/animations/animatedGreenWalking.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/sounds/helmet_breathe.ogg" type="AudioStream" id=7]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="Animation" id=4]
+resource_name = "repair_fuse_box"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:state")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "OCCUPIED", "FREE" ]
+}
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 490.0
+
+[sub_resource type="CircleShape2D" id=3]
 radius = 490.0
 
 [node name="oPlayer1" type="Node2D"]
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
+state = "OCCUPIED"
+
+[node name="Cooldowns" type="AnimationPlayer" parent="."]
+anims/repair_fuse_box = SubResource( 4 )
 
 [node name="PhysicalBody" type="KinematicBody2D" parent="." groups=[
 "player",
@@ -36,13 +59,20 @@ shadow_color = Color( 0.529412, 0.984314, 0.321569, 0 )
 
 [node name="CollisionShape" type="CollisionShape2D" parent="PhysicalBody"]
 scale = Vector2( 0.55, 0.4 )
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="InteractRange" type="Area2D" parent="PhysicalBody" groups=[
 "player",
 ]]
 scale = Vector2( 1.4, 1.4 )
+monitorable = false
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicalBody/InteractRange"]
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 3 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="PhysicalBody"]
 stream = ExtResource( 1 )
@@ -56,3 +86,5 @@ stream = ExtResource( 7 )
 volume_db = -30.0
 pitch_scale = 0.9
 autoplay = true
+[connection signal="body_entered" from="PhysicalBody/InteractRange" to="." method="_on_InteractRange_body_entered"]
+[connection signal="body_exited" from="PhysicalBody/InteractRange" to="." method="_on_InteractRange_body_exited"]

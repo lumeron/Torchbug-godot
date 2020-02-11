@@ -1,6 +1,6 @@
 extends AnimationPlayer
 
-var fuseBox_state = $".".fuseBox_state
+var fuseBox_state = false
 
 var counter = 0.000
 var timemax = 5.000
@@ -8,7 +8,6 @@ var timemax = 5.000
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	timemax = randi()%15 + 5
 
 func _physics_process(delta):
 	if (fuseBox_state):

@@ -1,11 +1,14 @@
 extends Node2D
 
+export var state = "FREE"
 
+var interactable = false
+var interactableBody = null
 var hrzSpd = 0
 var vrtSpd = 0
 var walkSpd = (1 * GLOBAL.game_movement_speed_factor)
-var state = "FREE";
 var velocity = Vector2()
+
 
 var key_left
 var key_right
@@ -39,26 +42,36 @@ func _physics_process(_delta):
 		$PhysicalBody/animatedGreenWalking.stop()
 		$PhysicalBody/AudioStreamPlayer2D.set_stream_paused(true)
 	else:
-		$PhysicalBody/animatedGreenWalking.animation = "moving"
-		$PhysicalBody/animatedGreenWalking.play()
-		$PhysicalBody/AudioStreamPlayer2D.set_stream_paused(false)
+		if (state != "OCCUPIED"):
+			$PhysicalBody/animatedGreenWalking.animation = "moving"
+			$PhysicalBody/animatedGreenWalking.play()
+			$PhysicalBody/AudioStreamPlayer2D.set_stream_paused(false)
 	
-	if Input.is_action_just_released("p1_interact"):
-		state = "INTERACTING"
-	if Input.is_action_just_released("p1_drop"):
-		state = "DROPPING"
+	if Input.is_action_pressed("p1_interact"):
+		if (state != "OCCUPIED"):
+			state = "INTERACTING"
+#	if Input.is_action_just_released("p1_drop"):
+#		state = "DROPPING"
 	
 	match state:
 		"FREE":
 			$PhysicalBody.PlayerState_Free(velocity)
 		"INTERACTING":
-			state = "FREE"
+			if (interactable):
+				if (interactableBody.get_node("Light2D/AnimationPlayer").fuseBox_state == false):
+					interactableBody.get_node("Light2D/AnimationPlayer").fuseBox_state = true
+					$Cooldowns.play("repair_fuse_box")
+				else:
+					state = "FREE"
+			else:
+				state = "FREE"
+#		"DROPPING":
+#			state = "FREE"
 			#TODO
 			#PlayerState_Interacting();
-		"DROPPING":
-			state = "FREE"
-			#TODO
-			#PlayerState_Interacting();
+		"OCCUPIED":
+			if (!$Cooldowns.is_playing()):
+				$Cooldowns.play("repair_fuse_box")
 		"DYING":
 			continue
 			#TODO
@@ -67,15 +80,19 @@ func _physics_process(_delta):
 			#TODO
 			#instance_destroy(self);
 		_:
-			state = "FREE"
 			continue
 	
 	
 	
 	
 	
-	
-	
-	
-	
-	
+func _on_InteractRange_body_entered(body):
+	if body.is_in_group("fuse_box"):
+		interactable = true
+		interactableBody = body
+
+
+func _on_InteractRange_body_exited(body):
+	if body.is_in_group("fuse_box"):
+		interactable = false
+		interactableBody = null
