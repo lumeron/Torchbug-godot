@@ -31,9 +31,7 @@ tracks/0/keys = {
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
 
-[node name="PhysicalBody" type="KinematicBody2D" parent="." groups=[
-"fuse_box",
-]]
+[node name="PhysicalBody" type="KinematicBody2D" parent="." groups=["fuse_box"]]
 collision_layer = 6
 collision_mask = 6
 
@@ -62,4 +60,5 @@ anims/flickering_lights = ExtResource( 4 )
 anims/flickering_lights2 = ExtResource( 7 )
 anims/flickering_lights3 = SubResource( 2 )
 script = ExtResource( 6 )
+
 [connection signal="ready" from="PhysicalBody/Light2D/AnimationPlayer" to="." method="_on_AnimationPlayer_ready"]

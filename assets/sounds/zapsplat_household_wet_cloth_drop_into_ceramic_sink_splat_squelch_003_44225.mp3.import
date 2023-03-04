@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_household_wet_cloth_drop_into_ceramic_sink_splat_squelch_003_44225.mp3-525f5f8f489fb588cf7e6fe2873307c5.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/zapsplat_household_wet_cloth_drop_into_ceramic_sink_splat_squelch_003_44225.mp3"
+dest_files=[ "res://.import/zapsplat_household_wet_cloth_drop_into_ceramic_sink_splat_squelch_003_44225.mp3-525f5f8f489fb588cf7e6fe2873307c5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
